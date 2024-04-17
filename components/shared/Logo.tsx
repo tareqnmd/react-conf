@@ -1,5 +1,5 @@
-import primaryLogo from '@/assets/images/primary-logo.png';
-import secondaryLogo from '@/assets/images/secondary-logo.png';
+import primaryLogo from '@/assets/images/logo/primary-logo.png';
+import secondaryLogo from '@/assets/images/logo/secondary-logo.png';
 import Image from 'next/image';
 const Logo = ({ type }: { type?: string }) => {
 	return (

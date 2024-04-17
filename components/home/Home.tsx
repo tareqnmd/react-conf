@@ -1,5 +1,11 @@
+import OurSponsor from './OurSponsor';
+
 const Home = () => {
-	return <div></div>;
+	return (
+		<>
+			<OurSponsor />
+		</>
+	);
 };
 
 export default Home;
