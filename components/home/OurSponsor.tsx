@@ -19,14 +19,18 @@ const sponsors = [
 ];
 const OurSponsor = () => {
 	return (
-		<div className="bg-[#F9FAFB] py-[100px]">
-			<h3 className="font-[700] text-[48px] text-[#0A142F]">Our Sponsor</h3>
-			{sponsors.map((sponsor, index) => (
-				<SponsorList
-					sponsor={sponsor}
-					key={index}
-				/>
-			))}
+		<div className="bg-[#F9FAFB]">
+			<div className="container grid gap-[24px] lg:gap-[32px] py-[56px] lg:py-[100px]">
+				<h3 className="font-[700] text-[20px] lg:text-[48px] text-[#0A142F] text-center">
+					Our Sponsor
+				</h3>
+				{sponsors.map((sponsor, index) => (
+					<SponsorList
+						sponsor={sponsor}
+						key={index}
+					/>
+				))}
+			</div>
 		</div>
 	);
 };

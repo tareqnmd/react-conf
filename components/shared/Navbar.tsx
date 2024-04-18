@@ -12,7 +12,7 @@ const links = [
 
 const Navbar = () => {
 	return (
-		<nav className="container flex justify-between items-center py-[32px] md:py-[40px]">
+		<nav className="container flex justify-between items-center py-[32px] lg:py-[40px]">
 			<Logo />
 			<ul className="hidden lg:flex items-center gap-[58px]">
 				{links.map((link, index) => (
