@@ -33,8 +33,8 @@ const getConferenceData = async (slug: string, tab: string) => {
                         social{
                             twitter
                             linkedin
-                            facebook
                             dribble
+                            github
                         }
                     }
                     sponsors{

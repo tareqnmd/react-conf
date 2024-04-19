@@ -11,7 +11,7 @@ export type ConferenceType = {
 const Conference = ({ conference }: { conference: ConferenceType }) => {
 	const { id, activeTab, name, slogan, conferenceTabs } = conference || {};
 	return (
-		<div className="container">
+		<div className="container grid gap-[40px] lg:gap-[52px] my-[20px] lg:my-[60px]">
 			<div className="grid gap-[12px] lg:gap-[16px]">
 				<h2 className="text-[#0A142F] text-[24px] lg:text-[48px] font-[700]">
 					{name}
@@ -20,8 +20,8 @@ const Conference = ({ conference }: { conference: ConferenceType }) => {
 					{slogan}
 				</p>
 			</div>
-			<div className="grid grid-cols-12 py-[40px] lg:py-[52px] lg:gap-[48px]">
-				<div className="col-span-12 lg:col-span-4 grid gap-[24px] lg:gap-[32px]">
+			<div className="grid grid-cols-12 lg:gap-[48px] place-items-start">
+				<div className="col-span-12 lg:col-span-4 grid gap-[24px] lg:gap-[32px] w-full">
 					{conferenceTabs?.map((tab: string) => (
 						<>
 							<Link href={`/conference/${id}?tab=${tab}`}>
@@ -40,7 +40,7 @@ const Conference = ({ conference }: { conference: ConferenceType }) => {
 						</>
 					))}
 				</div>
-				<div className="col-span-8 hidden lg:block">
+				<div className="col-span-8 hidden lg:block w-full">
 					<ConferenceTabInfo conference={conference} />
 				</div>
 			</div>
