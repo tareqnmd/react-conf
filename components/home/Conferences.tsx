@@ -36,7 +36,7 @@ const getConferenceData = async () => {
 const Conferences = async () => {
 	const conferences = await getConferenceData();
 	return (
-		<div className="container grid py-[40px] lg:py-[100px] gap-[20px] lg:gap-[40px]">
+		<div className="container max-w-[1088px] grid py-[40px] lg:py-[100px] gap-[20px] lg:gap-[40px]">
 			<h3 className="text-[#0A142F] font-[700] text-[24px] lg:text-[48px] text-center">
 				Conferences
 			</h3>
