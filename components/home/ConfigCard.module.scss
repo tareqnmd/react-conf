@@ -1,0 +1,30 @@
+.conference-card {
+	background: #f9fafb;
+	box-shadow: 0px 4px 8px 0px #0000000f;
+	width: max-content;
+	border-radius: 8px;
+	border-top: 4px solid #cdcdcd;
+	display: grid;
+	grid-template-columns: auto 1fr;
+	place-content: center;
+	gap: 10px 16px;
+	padding: 30px 20px;
+	&:hover {
+		border-top: 4px solid #ffc93e;
+	}
+	svg {
+		grid-row: span 2;
+	}
+	strong {
+		font-size: 18px;
+		line-height: 18px;
+		font-weight: 500;
+		color: #111d5e;
+	}
+	span {
+		font-size: 14px;
+		line-height: 14px;
+		font-weight: 400;
+		color: #617187;
+	}
+}
