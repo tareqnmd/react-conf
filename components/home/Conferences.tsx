@@ -37,7 +37,7 @@ const Conferences = async () => {
 	const conferences = await getConferenceData();
 	return (
 		<div className="container">
-			<div className="conference-timeline">
+			<div className="conference-timeline pl-[16px] lg:pl-[0px]">
 				{conferences?.map((conference: ConferenceCardType, index: number) => (
 					<ConferenceTimeline
 						type={index % 2 === 0 ? 'left' : 'right'}
