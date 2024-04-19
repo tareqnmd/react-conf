@@ -41,6 +41,7 @@ const Conferences = async () => {
 				{conferences?.map((conference: ConferenceCardType, index: number) => (
 					<ConferenceTimeline
 						type={index % 2 === 0 ? 'left' : 'right'}
+						lastItem={index === conferences.length - 1}
 						key={conference.id}
 						conference={conference}
 					/>

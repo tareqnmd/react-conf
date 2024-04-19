@@ -5,7 +5,7 @@ export function cn(...inputs: ClassValue[]) {
 	return twMerge(clsx(inputs));
 }
 
-export const scheduleDate=(dateString: string)=> {
+export const scheduleDate = (dateString: string) => {
 	const date = new Date(dateString);
 	const dayOfWeek = date.getDay();
 	const weekdays = [
@@ -24,7 +24,7 @@ export const scheduleDate=(dateString: string)=> {
 		weekdays[dayOfWeek],
 		`${month} ${dayOfMonth}${suffix}, ${date.getFullYear()}`,
 	];
-}
+};
 
 const getOrdinalSuffix = (day: number) => {
 	const ones = day % 10;
@@ -40,4 +40,11 @@ const getOrdinalSuffix = (day: number) => {
 		}
 	}
 	return 'th';
+};
+
+export const conferencesDate = (dateString: string) => {
+	const date = new Date(dateString);
+	const dayOfMonth = date.getDate();
+	const month = date.toLocaleString('default', { month: 'long' });
+	return `${dayOfMonth} ${month}, ${date.getFullYear()}`;
 };
