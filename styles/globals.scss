@@ -1,3 +1,7 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+.active-tab {
+	box-shadow: 0px 10px 20px 0px #a1a1a140;
+}
