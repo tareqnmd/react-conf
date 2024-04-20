@@ -12,7 +12,7 @@ const SnakeLine = () => {
 				stroke="#FFC93E"
 				strokeWidth="2"
 				strokeLinecap="round"
-				stroke-dasharray="10 10"
+				strokeDasharray="10 10"
 			/>
 		</svg>
 	);
