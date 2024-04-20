@@ -13,7 +13,7 @@ const ConferenceTimeline = ({
 	lastItem: boolean;
 }) => {
 	return (
-		<div className="grid gap-x-[24px] lg:gap-x-[0px] grid-cols-[auto_1fr] lg:grid-cols-11 mx-auto">
+		<div className="grid gap-x-[24px] lg:gap-x-[0px] grid-cols-[auto_1fr] lg:grid-cols-11 mx-auto conference-timeline">
 			<div
 				className={cn(
 					'pb-[40px] order-3',
@@ -27,7 +27,7 @@ const ConferenceTimeline = ({
 			<div className="row-span-2 lg:row-span-1 lg:col-start-6 lg:col-end-7 md:mx-auto relative order-1 lg:order-2">
 				<div className="h-full w-6 flex items-center justify-center">
 					{!lastItem && (
-						<div className="h-full w-1 bg-[#cdcdcd] pointer-events-none"></div>
+						<div className="vertical-line h-full w-1 bg-[#cdcdcd] pointer-events-none"></div>
 					)}
 				</div>
 				<div className="absolute top-0 -left-1/2">

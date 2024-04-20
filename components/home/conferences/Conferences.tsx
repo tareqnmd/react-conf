@@ -43,7 +43,7 @@ const Conferences = async () => {
 			<h3 className="text-[#0A142F] font-[700] text-[24px] lg:text-[48px] text-center">
 				Conferences
 			</h3>
-			<div className="conference-timeline pl-[16px] lg:pl-[0px]">
+			<div className="pl-[16px] lg:pl-[0px]">
 				{conferences?.map((conference: ConferenceCardType, index: number) => (
 					<ConferenceTimeline
 						type={index % 2 === 0 ? 'left' : 'right'}

@@ -1,3 +1,4 @@
+import { cn } from '@/lib/util';
 import Link from 'next/link';
 import { ConferenceCardType } from './Conferences';
 import styles from './ConfigCard.module.scss';
@@ -5,7 +6,7 @@ const ConferenceCard = ({ conference }: { conference: ConferenceCardType }) => {
 	const { id, name, slogan } = conference || {};
 	return (
 		<Link href={`conference/${id}`}>
-			<div className={styles['conference-card']}>
+			<div className={cn('conference-card', styles['conference-card'])}>
 				<svg
 					width="16"
 					height="16"

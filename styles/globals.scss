@@ -11,3 +11,23 @@ html {
 	width: 100dvw;
 	height: 100dvh;
 }
+
+.conference-timeline {
+	&:hover {
+		.timeline-svg {
+			path {
+				fill: #ffc93e;
+			}
+			circle {
+				stroke: #ffc93e;
+				fill: #fff9eb;
+			}
+		}
+		.vertical-line {
+			background-color: #ffc93e;
+		}
+		.conference-card {
+			border-top: 4px solid #ffc93e;
+		}
+	}
+}
