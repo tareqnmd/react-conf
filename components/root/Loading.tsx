@@ -1,6 +1,6 @@
 const Loading = () => {
 	return (
-		<main className="app-screen grid place-items-center">
+		<main className="root-screen grid place-items-center">
 			<span>Loading...</span>
 		</main>
 	);

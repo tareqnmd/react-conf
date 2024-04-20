@@ -1,5 +1,5 @@
-import headerImg from '@/assets/images/header_img.png';
-import headerImg2 from '@/assets/images/header_img_2.png';
+import headerImg from '@/assets/images/header/header_img.png';
+import headerImg2 from '@/assets/images/header/header_img_2.png';
 import Star from '@/components/icons/Star';
 import Image from 'next/image';
 

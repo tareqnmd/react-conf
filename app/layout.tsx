@@ -1,4 +1,4 @@
-import AppLayout from '@/components/layout/AppLayout';
+import { cn } from '@/lib/util';
 import '@/styles/globals.scss';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
@@ -17,8 +17,13 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body className={inter.className}>
-				<AppLayout>{children}</AppLayout>
+			<body
+				className={cn(
+					'min-h-dvh grid grid-rows-layout relative',
+					inter.className
+				)}
+			>
+				{children}
 			</body>
 		</html>
 	);

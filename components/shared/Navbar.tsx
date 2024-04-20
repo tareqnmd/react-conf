@@ -12,21 +12,23 @@ const links = [
 
 const Navbar = () => {
 	return (
-		<nav className="container flex justify-between items-center py-[32px] lg:py-[40px]">
-			<Link href="/">
-				<Logo />
-			</Link>
-			<ul className="hidden lg:flex items-center gap-[58px]">
-				{links.map((link, index) => (
-					<li
-						className="font-[500] text-[18px] text-[#0A142F]"
-						key={index}
-					>
-						<Link href={link.link}>{link.title}</Link>
-					</li>
-				))}
-			</ul>
-			<SidebarIcon />
+		<nav className="absolute w-full">
+			<div className="container flex justify-between items-center py-[32px] lg:py-[40px]">
+				<Link href="/">
+					<Logo />
+				</Link>
+				<ul className="hidden lg:flex items-center gap-[58px]">
+					{links.map((link, index) => (
+						<li
+							className="font-[500] text-[18px] text-[#0A142F]"
+							key={index}
+						>
+							<Link href={link.link}>{link.title}</Link>
+						</li>
+					))}
+				</ul>
+				<SidebarIcon />
+			</div>
 		</nav>
 	);
 };

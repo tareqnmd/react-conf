@@ -9,7 +9,8 @@ export type ScheduleType = {
 const Schedules = ({ schedules }: { schedules: ScheduleType[] }) => {
 	return (
 		<div className="grid gap-[24px]">
-			{schedules.map((schedule: ScheduleType, index: number) => (
+			{schedules?.length === 0 && <strong>No Data Found</strong>}
+			{schedules?.map((schedule: ScheduleType, index: number) => (
 				<TabInfoCard key={index}>
 					<SingleSchedule schedule={schedule} />
 				</TabInfoCard>

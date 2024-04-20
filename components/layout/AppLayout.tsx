@@ -4,11 +4,11 @@ import Navbar from '../shared/Navbar';
 
 const AppLayout = ({ children }: { children: ReactNode }) => {
 	return (
-		<main className="min-h-dvh grid grid-rows-layout">
+		<>
 			<Navbar />
-			{children}
+			<main>{children}</main>
 			<Footer />
-		</main>
+		</>
 	);
 };
 

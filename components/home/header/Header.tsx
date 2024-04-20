@@ -1,4 +1,4 @@
-import headerImg2 from '@/assets/images/header_img_2.png';
+import headerImg2 from '@/assets/images/header/header_img_2.png';
 import LineCircle from '@/components/icons/LineCircle';
 import LineCircleHalf from '@/components/icons/LineCircleHalf';
 import SmallSnakeLine from '@/components/icons/SmallSnakeLine';
@@ -10,7 +10,7 @@ import RightInfo from './RightInfo';
 import ScrollDown from './ScrollDown';
 const Header = () => {
 	return (
-		<div className="relative overflow-hidden py-[56px] lg:py-[100px]">
+		<div className="relative overflow-hidden pt-[144px] lg:pt-[166px] pb-[56px] lg:pb-[100px] header-area">
 			<div className="container max-w-[1550px] p-[1.5rem] lg:p-[1rem]">
 				<div className="grid grid-cols-1 lg:grid-cols-12 gap-[32px] lg:gap-[40px] place-items-end relative">
 					<div className="max-lg:hidden absolute top-0 right-[-100px] xl:right-[-30px] 2xl:right-0">

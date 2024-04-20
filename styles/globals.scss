@@ -5,3 +5,14 @@
 html {
 	scroll-behavior: smooth;
 }
+
+.root-screen {
+	position: fixed;
+	width: 100dvw;
+	height: 100dvh;
+}
+
+.header-area {
+	background-image: url('../assets/images/header/header_bg.png');
+	background-size: contain;
+}

@@ -18,8 +18,12 @@ export type ContactType = {
 const ContactInfo = ({ contacts }: { contacts: ContactType[] }) => {
 	return (
 		<div className="grid gap-[24px]">
-			{contacts.map((contact, index) => (
-				<TabInfoCard key={index} small>
+			{contacts?.length === 0 && <strong>No Data Found</strong>}
+			{contacts?.map((contact, index) => (
+				<TabInfoCard
+					key={index}
+					small
+				>
 					<SingleContactInfo contact={contact} />
 				</TabInfoCard>
 			))}

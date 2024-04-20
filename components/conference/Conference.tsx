@@ -26,7 +26,7 @@ const Conference = ({ conference }: { conference: ConferenceType }) => {
 		// drop_target.appendChild(document.getElementById(draggable_item));
 	};
 	return (
-		<div className="container grid gap-[40px] lg:gap-[52px] my-[20px] lg:my-[60px]">
+		<div className="container grid gap-[40px] lg:gap-[52px] my-[20px] pt-[88px] lg:pt-[110px] lg:my-[60px]">
 			<div className="grid gap-[12px] lg:gap-[16px]">
 				<h2 className="text-[#0A142F] text-[24px] lg:text-[48px] font-[700]">
 					{name}

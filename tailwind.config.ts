@@ -21,7 +21,7 @@ const config: Config = {
 					'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
 			},
 			gridTemplateRows: {
-				layout: 'auto 1fr auto',
+				'layout': '1fr auto'
 			},
 			'.vertical-lr': {
 				writingMode: 'vertical-lr',

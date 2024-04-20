@@ -14,7 +14,8 @@ const SingleSchedule = ({ schedule }: { schedule: ScheduleType }) => {
 					{weekDay}
 				</span>
 			</div>
-			{intervals.map((interval, index) => (
+			{intervals?.length === 0 && <strong>No Data Found</strong>}
+			{intervals?.map((interval, index) => (
 				<div
 					className="text-[#0A142F] font-[400] text-[14px] lg:text-[16px]"
 					key={index}

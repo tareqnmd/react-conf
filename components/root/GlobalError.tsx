@@ -13,9 +13,9 @@ const GlobalError = ({
 	}, [error]);
 
 	return (
-		<main className="app-screen grid place-items-center">
+		<main className="root-screen grid place-items-center">
 			<div className="text-center">
-				<h2 className=''>Something went wrong !!!</h2>
+				<h2 className="">Something went wrong !!!</h2>
 				<button
 					className="underline"
 					onClick={() => reset()}
