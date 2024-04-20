@@ -1,7 +1,6 @@
 'use client';
-import Link from 'next/link';
-import ConferenceTab from './tab/ConferenceTab';
 import ConferenceTabInfo from './tab/ConferenceTabInfo';
+import ConferenceTabs from './tab/ConferenceTabs';
 export type ConferenceType = {
 	id: string;
 	name: string;
@@ -22,25 +21,7 @@ const Conference = ({ conference }: { conference: ConferenceType }) => {
 				</p>
 			</div>
 			<div className="grid grid-cols-12 lg:gap-[48px] place-items-start">
-				<div className="col-span-12 lg:col-span-4 grid gap-[24px] lg:gap-[32px] w-full">
-					{conferenceTabs?.map((tab: string) => (
-						<>
-							<Link href={`/conference/${id}?tab=${tab}`}>
-								<ConferenceTab
-									active={activeTab === tab}
-									title={tab}
-								/>
-							</Link>
-							<div
-								className={`${
-									activeTab === tab ? 'block' : 'hidden'
-								} lg:hidden`}
-							>
-								<ConferenceTabInfo conference={conference} />
-							</div>
-						</>
-					))}
-				</div>
+				<ConferenceTabs conference={conference} />
 				<div className="col-span-8 hidden lg:block w-full">
 					<ConferenceTabInfo conference={conference} />
 				</div>
