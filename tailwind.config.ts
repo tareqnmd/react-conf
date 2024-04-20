@@ -23,6 +23,9 @@ const config: Config = {
 			gridTemplateRows: {
 				layout: 'auto 1fr auto',
 			},
+			'.vertical-lr': {
+				writingMode: 'vertical-lr',
+			},
 		},
 		colors: {
 			primary: '#f1f1f1',
