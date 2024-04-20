@@ -10,7 +10,7 @@ import RightInfo from './RightInfo';
 import ScrollDown from './ScrollDown';
 const Header = () => {
 	return (
-		<div className="relative overflow-hidden pt-[144px] lg:pt-[166px] pb-[56px] lg:pb-[100px] header-area bg-[url('../assets/images/header/header_bg_small.png')] lg:bg-[url('../assets/images/header/header_bg.png')] bg-cover lg:bg-contain">
+		<div className="relative overflow-hidden pt-[144px] lg:pt-[166px] pb-[56px] lg:pb-[100px] header-area bg-[url('../assets/images/header/header_bg_small.png')] lg:bg-[url('../assets/images/header/header_bg.png')] bg-cover lg:bg-100% bg-no-repeat">
 			<div className="container max-w-[1550px] p-[1.5rem] lg:p-[1rem]">
 				<div className="grid grid-cols-1 lg:grid-cols-12 gap-[32px] lg:gap-[40px] place-items-end relative">
 					<div className="max-lg:hidden absolute top-0 right-[-100px] xl:right-[-30px] 2xl:right-0">
