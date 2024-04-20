@@ -1,5 +1,5 @@
+import TabInfoCard from '../tab/TabInfoCard';
 import SingleSchedule from './SingleSchedule';
-import TabInfoCard from './TabInfoCard';
 
 export type ScheduleType = {
 	day: string;

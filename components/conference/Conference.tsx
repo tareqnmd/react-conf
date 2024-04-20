@@ -1,7 +1,7 @@
 'use client';
 import Link from 'next/link';
-import ConferenceTab from './ConferenceTab';
-import ConferenceTabInfo from './ConferenceTabInfo';
+import ConferenceTab from './tab/ConferenceTab';
+import ConferenceTabInfo from './tab/ConferenceTabInfo';
 export type ConferenceType = {
 	id: string;
 	name: string;

@@ -6,6 +6,10 @@ const nextConfig = {
 				protocol: 'https',
 				hostname: 'api.react-finland.fi',
 			},
+			{
+				protocol: 'https',
+				hostname: 'typeofconf.com',
+			},
 		],
 	},
 };

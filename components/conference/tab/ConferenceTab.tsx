@@ -1,5 +1,5 @@
 import { cn } from '@/lib/util';
-import Rearrange from '../icons/Rearrange';
+import Rearrange from '../../icons/Rearrange';
 
 const ConferenceTab = ({
 	title,

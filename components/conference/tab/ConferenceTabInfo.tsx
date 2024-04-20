@@ -1,5 +1,5 @@
-import ContactInfo from './ContactInfo';
-import Schedules from './Schedules';
+import ContactInfo from '../contacts/ContactInfo';
+import Schedules from '../schedules/Schedules';
 
 const ConferenceTabInfo = ({ conference }: any) => {
 	const { activeTab } = conference;

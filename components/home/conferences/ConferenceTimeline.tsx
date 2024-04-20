@@ -1,5 +1,5 @@
 import { cn, conferencesDate } from '@/lib/util';
-import Storm from '../icons/Storm';
+import Storm from '../../icons/Storm';
 import ConferenceCard from './ConferenceCard';
 import { ConferenceCardType } from './Conferences';
 

@@ -1,6 +1,6 @@
-import Conferences from './Conferences';
+import Conferences from './conferences/Conferences';
 import Header from './header/Header';
-import OurSponsor from './OurSponsor';
+import OurSponsor from './sponsors/OurSponsor';
 
 const Home = () => {
 	return (

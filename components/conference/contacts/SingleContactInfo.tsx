@@ -1,9 +1,9 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import SmallDribble from '../icons/SmallDribble';
-import SmallGithub from '../icons/SmallGithub';
-import SmallLinkedin from '../icons/SmallLinkedin';
-import SmallTwitter from '../icons/SmallTwitter';
+import SmallDribble from '../../icons/SmallDribble';
+import SmallGithub from '../../icons/SmallGithub';
+import SmallLinkedin from '../../icons/SmallLinkedin';
+import SmallTwitter from '../../icons/SmallTwitter';
 import { ContactType } from './ContactInfo';
 
 const SingleContactInfo = ({ contact }: { contact: ContactType }) => {

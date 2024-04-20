@@ -1,5 +1,5 @@
+import TabInfoCard from '../tab/TabInfoCard';
 import SingleContactInfo from './SingleContactInfo';
-import TabInfoCard from './TabInfoCard';
 
 export type ContactType = {
 	name: string;
