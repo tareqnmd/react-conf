@@ -1,6 +1,7 @@
 import Conference from '@/components/conference/Conference';
 import axios from 'axios';
-const getConferenceData = async (slug: string, tab: string) => {
+
+const getConferenceData = async (slug: string, tab?: string) => {
 	try {
 		const response = await axios.post(process.env.GRAPHQL_API_URL as string, {
 			query: `
@@ -58,6 +59,19 @@ const getConferenceData = async (slug: string, tab: string) => {
 		return {};
 	}
 };
+
+export async function generateMetadata({
+	params,
+}: {
+	params: { slug: string };
+}) {
+	const conference = await getConferenceData(params.slug);
+	return {
+		title: conference.name || 'React Conference',
+		description: conference.slogan || 'React Conference',
+	};
+}
+
 const Page = async ({
 	params,
 	searchParams,
