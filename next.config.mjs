@@ -10,6 +10,10 @@ const nextConfig = {
 				protocol: 'https',
 				hostname: 'typeofconf.com',
 			},
+			{
+				protocol: 'https',
+				hostname: 'www.reason-conf.com',
+			},
 		],
 	},
 };

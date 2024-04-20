@@ -1,15 +1,25 @@
-'use client';
+import { ContactType } from './contacts/ContactInfo';
+import { ScheduleType } from './schedules/Schedules';
 import ConferenceTabInfo from './tab/ConferenceTabInfo';
 import ConferenceTabs from './tab/ConferenceTabs';
+export type ActiveTabType =
+	| 'schedules'
+	| 'speakers'
+	| 'organizers'
+	| 'sponsors';
 export type ConferenceType = {
 	id: string;
 	name: string;
-	activeTab: string;
+	activeTab: ActiveTabType;
 	slogan: string;
-	conferenceTabs: string[];
+	conferenceTabs: { title: string; id: string }[];
+	schedules: ScheduleType[];
+	sponsors: ContactType[];
+	organizers: ContactType[];
+	speakers: ContactType[];
 };
 const Conference = ({ conference }: { conference: ConferenceType }) => {
-	const { id, activeTab, name, slogan, conferenceTabs } = conference || {};
+	const { name, slogan } = conference || {};
 	return (
 		<div className="container grid gap-[40px] lg:gap-[52px] my-[20px] pt-[88px] lg:pt-[110px] lg:my-[60px]">
 			<div className="grid gap-[12px] lg:gap-[16px]">

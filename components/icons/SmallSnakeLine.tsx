@@ -10,8 +10,8 @@ const SmallSnakeLine = () => {
 			<path
 				d="M161.5 84.0948C198.974 88.5351 301.831 86.8276 310.5 35.7117C321.336 -28.1831 169.5 -1.99996 291 114.712C376.908 197.234 289.5 403.288 -20.5 434.5"
 				stroke="#FFC93E"
-				stroke-width="2"
-				stroke-linecap="round"
+				strokeWidth="2"
+				strokeLinecap="round"
 				stroke-dasharray="10 10"
 			/>
 		</svg>

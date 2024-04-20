@@ -77,7 +77,12 @@ const getConferenceData = async (slug: string, tab?: string) => {
 		const conference = response.data.data.conference;
 		return {
 			...conference,
-			conferenceTabs: ['organizers', 'speakers', 'schedules', 'sponsors'],
+			conferenceTabs: [
+				{ id: 'organizers', title: 'Organizers' },
+				{ id: 'speakers', title: 'Speakers' },
+				{ id: 'schedules', title: 'Schedules' },
+				{ id: 'sponsors', title: 'Sponsors' },
+			],
 			activeTab: tab,
 		};
 	} catch (error) {

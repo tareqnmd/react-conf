@@ -1,15 +1,24 @@
+import { ConferenceType } from '../Conference';
 import ContactInfo from '../contacts/ContactInfo';
 import Schedules from '../schedules/Schedules';
 
-const ConferenceTabInfo = ({ conference }: any) => {
+const ConferenceTabInfo = ({ conference }: { conference: ConferenceType }) => {
 	const { activeTab } = conference;
-	const tabData = conference[activeTab];
+	const { schedules, organizers, speakers, sponsors } = conference;
 	return (
 		<div className="rounded-[8px] bg-[#F9FAFB] p-[20px] lg:p-[52px]">
 			{activeTab === 'schedules' ? (
-				<Schedules schedules={tabData} />
+				<Schedules schedules={schedules} />
 			) : (
-				<ContactInfo contacts={tabData} />
+				<ContactInfo
+					contacts={
+						activeTab === 'organizers'
+							? organizers
+							: activeTab === 'sponsors'
+							? sponsors
+							: speakers
+					}
+				/>
 			)}
 		</div>
 	);
