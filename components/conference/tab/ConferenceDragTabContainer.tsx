@@ -5,7 +5,7 @@ import { ConferenceType } from '../Conference';
 import ConferenceTab from './ConferenceTab';
 import ConferenceTabInfo from './ConferenceTabInfo';
 
-const ConferenceDragTab = ({
+const ConferenceDragTabContainer = ({
 	conference,
 	tab,
 }: {
@@ -36,4 +36,4 @@ const ConferenceDragTab = ({
 	);
 };
 
-export default ConferenceDragTab;
+export default ConferenceDragTabContainer;

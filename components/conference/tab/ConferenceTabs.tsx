@@ -7,7 +7,8 @@ import {
 } from '@dnd-kit/sortable';
 import { useState } from 'react';
 import { ConferenceType } from '../Conference';
-import ConferenceDragTab from './ConferenceDragTab';
+import ConferenceBaseTab from './ConferenceBaseTab';
+import ConferenceDragTabContainer from './ConferenceDragTabContainer';
 
 export type TabType = { title: string; id: string };
 
@@ -25,25 +26,36 @@ const ConferenceTabs = ({ conference }: { conference: ConferenceType }) => {
 		});
 	};
 	return (
-		<div className="col-span-12 lg:col-span-4 grid gap-[24px] lg:gap-[32px] w-full">
-			<DndContext
-				onDragEnd={handleDragEnd}
-				collisionDetection={closestCorners}
-			>
-				<SortableContext
-					items={tabs}
-					strategy={verticalListSortingStrategy}
+		<>
+			<div className="hidden col-span-4 lg:grid gap-[32px] w-full">
+				<DndContext
+					onDragEnd={handleDragEnd}
+					collisionDetection={closestCorners}
 				>
-					{tabs?.map((tab: TabType) => (
-						<ConferenceDragTab
-							key={tab.id}
-							tab={tab.id}
-							conference={conference}
-						/>
-					))}
-				</SortableContext>
-			</DndContext>
-		</div>
+					<SortableContext
+						items={tabs}
+						strategy={verticalListSortingStrategy}
+					>
+						{tabs?.map((tab: TabType) => (
+							<ConferenceDragTabContainer
+								key={tab.id}
+								tab={tab.id}
+								conference={conference}
+							/>
+						))}
+					</SortableContext>
+				</DndContext>
+			</div>
+			<div className="col-span-12 grid gap-[24px] w-full lg:hidden">
+				{tabs?.map((tab: TabType) => (
+					<ConferenceBaseTab
+						key={tab.id}
+						tab={tab.id}
+						conference={conference}
+					/>
+				))}
+			</div>
+		</>
 	);
 };
 
