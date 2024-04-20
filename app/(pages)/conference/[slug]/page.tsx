@@ -1,6 +1,31 @@
 import Conference from '@/components/conference/Conference';
 import axios from 'axios';
 
+const getAllConferenceSlug = async () => {
+	try {
+		const response = await axios.post(process.env.GRAPHQL_API_URL as string, {
+			query: `
+            query{
+                conferences{
+                    id
+                }
+            }
+          `,
+		});
+		const conferences = response.data.data.conferences;
+		return conferences;
+	} catch (error) {
+		return [];
+	}
+};
+
+export async function generateStaticParams() {
+	const conferences = await getAllConferenceSlug();
+	return conferences.map((data: { id: string }) => ({
+		slug: data.id,
+	}));
+}
+
 const getConferenceData = async (slug: string, tab?: string) => {
 	try {
 		const response = await axios.post(process.env.GRAPHQL_API_URL as string, {
