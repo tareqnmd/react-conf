@@ -22,7 +22,7 @@ const SingleContactInfo = ({ contact }: { contact: ContactType }) => {
 				height="140"
 				className="rounded-[8px] row-span-2 w-[88px] h-[88px] lg:w-[140px] lg:h-[140px] object-scale-down"
 			/>
-			<div className="flex justify-start lg:justify-center items-start flex-col gap-[10px] self-end">
+			<div className="flex justify-start lg:justify-between items-start lg:items-center max-lg:flex-col gap-[10px] self-end">
 				<h4 className="text-[#0A142F] font-[700] text-[16px] lg:text-[20px]">
 					{name}
 				</h4>
