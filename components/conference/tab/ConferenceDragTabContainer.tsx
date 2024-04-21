@@ -3,7 +3,6 @@ import { CSS } from '@dnd-kit/utilities';
 import Link from 'next/link';
 import { ConferenceType } from '../Conference';
 import ConferenceTab from './ConferenceTab';
-import ConferenceTabInfo from './ConferenceTabInfo';
 
 const ConferenceDragTabContainer = ({
 	conference,
@@ -17,22 +16,18 @@ const ConferenceDragTabContainer = ({
 		useSortable({ id: tab });
 	const style = { transition, transform: CSS.Transform.toString(transform) };
 	return (
-		<div
+		<Link
 			ref={setNodeRef}
 			{...attributes}
 			{...listeners}
 			style={style}
+			href={`/conference/${id}?tab=${tab}`}
 		>
-			<Link href={`/conference/${id}?tab=${tab}`}>
-				<ConferenceTab
-					active={activeTab === tab}
-					title={tab}
-				/>
-			</Link>
-			<div className={`${activeTab === tab ? 'block' : 'hidden'} lg:hidden`}>
-				<ConferenceTabInfo conference={conference} />
-			</div>
-		</div>
+			<ConferenceTab
+				active={activeTab === tab}
+				title={tab}
+			/>
+		</Link>
 	);
 };
 
