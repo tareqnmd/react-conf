@@ -1,5 +1,12 @@
 'use client';
-import { DndContext, DragEndEvent, closestCorners } from '@dnd-kit/core';
+import {
+	DndContext,
+	DragEndEvent,
+	MouseSensor,
+	closestCorners,
+	useSensor,
+	useSensors,
+} from '@dnd-kit/core';
 import {
 	SortableContext,
 	arrayMove,
@@ -25,10 +32,20 @@ const ConferenceTabs = ({ conference }: { conference: ConferenceType }) => {
 			return arrayMove(tabs, originalPos, newPos);
 		});
 	};
+
+	const sensors = useSensors(
+		useSensor(MouseSensor, {
+			activationConstraint: {
+				distance: 20,
+			},
+		})
+	);
+
 	return (
 		<>
 			<div className="hidden col-span-4 lg:grid gap-[32px] w-full">
 				<DndContext
+					sensors={sensors}
 					onDragEnd={handleDragEnd}
 					collisionDetection={closestCorners}
 				>
