@@ -1,6 +1,6 @@
 import Conference from '@/components/conference/Conference';
 import axios from 'axios';
-
+import { redirect } from 'next/navigation';
 const getAllConferenceSlug = async () => {
 	try {
 		const response = await axios.post(process.env.GRAPHQL_API_URL as string, {
@@ -86,7 +86,7 @@ const getConferenceData = async (slug: string, tab?: string) => {
 			activeTab: tab,
 		};
 	} catch (error) {
-		return {};
+		redirect('/');
 	}
 };
 
@@ -109,6 +109,9 @@ const Page = async ({
 	params: { slug: string };
 	searchParams: { tab: string };
 }) => {
+	if (!params.slug) {
+		redirect('/');
+	}
 	const activeTab = searchParams.tab || 'organizers';
 	const conference = await getConferenceData(params.slug, activeTab);
 	return <Conference conference={conference} />;
