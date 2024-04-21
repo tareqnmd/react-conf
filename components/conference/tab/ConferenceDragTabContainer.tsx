@@ -12,8 +12,14 @@ const ConferenceDragTabContainer = ({
 	conference: ConferenceType;
 }) => {
 	const { id, activeTab } = conference;
-	const { attributes, listeners, setNodeRef, transform, transition } =
-		useSortable({ id: tab });
+	const {
+		isDragging,
+		attributes,
+		listeners,
+		setNodeRef,
+		transform,
+		transition,
+	} = useSortable({ id: tab });
 	const style = { transition, transform: CSS.Transform.toString(transform) };
 	return (
 		<Link
@@ -21,7 +27,7 @@ const ConferenceDragTabContainer = ({
 			{...attributes}
 			{...listeners}
 			style={style}
-			href={`/conference/${id}?tab=${tab}`}
+			href={isDragging ? '#' : `/conference/${id}?tab=${tab}`}
 		>
 			<ConferenceTab
 				active={activeTab === tab}
